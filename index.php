@@ -71,11 +71,11 @@
                 <div class="row mb-3">
                     <div class="col">
                         <label class="form-label">العقد</label>
-                        <input type="text" class="form-control" name="first_name" placeholder="العقد">
+                        <input type="text" class="form-control" name="contract" placeholder="العقد">
                     </div>
                     <div class="col">
                         <label class="form-label">العميل</label>
-                        <input type="text" class="form-control" name="last_name" placeholder="العميل">
+                        <input type="text" class="form-control" name="client" placeholder="العميل">
                     </div>
                 </div>
                 <div class="mb-3">
@@ -100,7 +100,7 @@
                 </div>
                 <div class="col-10">
                     <label class="form-label">طريقة السداد</label>
-                    <select name="country" class="form-control">
+                    <select name="wayofpay" class="form-control">
                         <option value="استقطاع">استقطاع</option>
                         <option value="نقدي">نقدي</option>
                         <option value="استقطاع ضمان">استقطاع ضمان</option>
@@ -110,10 +110,10 @@
                 <div class="form-group mb-3">
                     <label class="form-label">حالة العقد:</label>
                     &nbsp;&nbsp;
-                    <input type="radio" class="form-check-input" name="الحالة" value="نشط">
+                    <input type="radio" class="form-check-input" name="status" value="نشط">
                     <label class="form-input-label">نشط</label>
                     &nbsp;
-                    <input type="radio" class="form-check-input" name="الحالة" value="مخالصة">
+                    <input type="radio" class="form-check-input" name="status" value="مخالصة">
                     <label class="form-input-label">مخالصة</label>
                 </div>
                 <div>

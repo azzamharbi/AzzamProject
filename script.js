@@ -26,6 +26,7 @@ $(document).ready(function() {
             value.kamia,
             value.qist,
             value.conttotal,
+            value.wayofpay,
             value.status,
             '<Button type="button" class="btn editBtn" value="' + value.id + '"><i class="fa-solid fa-pen-to-square fa-xl"></i></Button>' +
             '<Button type="button" class="btn deleteBtn" value="' + value.id + '"><i class="fa-solid fa-trash fa-xl"></i></Button>' 
@@ -89,15 +90,14 @@ $(document).ready(function() {
         $("#editForm input[name='contract']").val(data.contract);
         $("#editForm input[name='client']").val(data.client);
         $("#editForm input[name='contdate']").val(data.contdate);
-        $("#editForm select[name='contenddate']").val(data.contenddate);
-        $("#editForm select[name='kamia']").val(data.kamia);
-        $("#editForm select[name='qist']").val(data.qist);
-        $("#editForm select[name='conttotal']").val(data.conttotal);
-        $("#editForm select[name='status']").val(data.status);
-        
-        if (data.gender === "نشط") {
+        $("#editForm input[name='contenddate']").val(data.contenddate);
+        $("#editForm input[name='kamia']").val(data.kamia);
+        $("#editForm input[name='qist']").val(data.qist);
+        $("#editForm input[name='conttotal']").val(data.conttotal);
+        $("#editForm select[name='wayofpay']").val(data.wayofpay);                
+        if (data.status === "نشط") {
           $("#editForm input[name='status'][value='نشط']").attr("checked", true);
-        } else if(data.gender === "مخالصة") {
+        } else if(data.status === "مخالصة") {
           $("#editForm input[name='status'][value='مخالصة']").attr("checked", true);          
         }
         // show the edit user offcanvas

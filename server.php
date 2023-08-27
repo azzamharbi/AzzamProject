@@ -83,7 +83,7 @@ if ($_GET["action"] === "fetchSingle") {
 // function to update data
 if ($_GET["action"] === "updateData") {
   
-  if (!empty($_POST["contract"]) && !empty($_POST["client"]) && !empty($_POST["contdate"]) && !empty($_POST["contenddate"]) && !empty($_POST["kamia"]) && !empty($_POST["qist"]) && !empty($_POST["conttotal"]))
+  if (!empty($_POST["contract"]) && !empty($_POST["client"]) && !empty($_POST["contdate"]) && !empty($_POST["contenddate"]) && !empty($_POST["kamia"]) && !empty($_POST["qist"]) && !empty($_POST["conttotal"]) && !empty($_POST["wayofpay"]) && !empty($_POST["status"]))
   {
     $contract = mysqli_real_escape_string($conn, $_POST["contract"]);
     $client = mysqli_real_escape_string($conn, $_POST["client"]);
