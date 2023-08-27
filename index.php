@@ -15,8 +15,9 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Datatables CSS  -->
     <link href="https://cdn.datatables.net/v/bs5/dt-1.13.4/datatables.min.css" rel="stylesheet" />
-    <!-- CSS  -->
-    <link rel="stylesheet" href="style.css">
+    <!-- CSS  
+    <link rel="stylesheet" href="style.css"> 
+    -->
 </head>
 
 <body>
