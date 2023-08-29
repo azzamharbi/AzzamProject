@@ -85,6 +85,7 @@ if ($_GET["action"] === "updateData") {
   
   if (!empty($_POST["contract"]) && !empty($_POST["client"]) && !empty($_POST["contdate"]) && !empty($_POST["contenddate"]) && !empty($_POST["kamia"]) && !empty($_POST["qist"]) && !empty($_POST["conttotal"]) && !empty($_POST["wayofpay"]) && !empty($_POST["status"]))
   {
+    $id = mysqli_real_escape_string($conn, $_POST["id"]);
     $contract = mysqli_real_escape_string($conn, $_POST["contract"]);
     $client = mysqli_real_escape_string($conn, $_POST["client"]);
     $contdate = mysqli_real_escape_string($conn, $_POST["contdate"]);
@@ -95,7 +96,8 @@ if ($_GET["action"] === "updateData") {
     $wayofpay = mysqli_real_escape_string($conn, $_POST["wayofpay"]);
     $status = mysqli_real_escape_string($conn, $_POST["status"]);
 
-    $sql = "UPDATE `contdata` SET `contract`='$contract',`client`='$client',`contdate`='$contdate',`contenddate`='$contenddate',`kamia`='$kamia',`qist`='$qist' ,`conttotal`='$conttotal',`wayofpay`='$wayofpay',`status`='$status' WHERE `id`=$id";
+    $sql = "UPDATE `contdata` SET `contract`='$contract',`client`='$client',`contdate`='$contdate',`contenddate`='$contenddate',`kamia`='$kamia',`qist`='$qist',`conttotal`='$conttotal',`wayofpay`='$wayofpay',`status`='$status' WHERE `id`=$id";
+
     if (mysqli_query($conn, $sql)) {
       echo json_encode([
         "statusCode" => 200,
@@ -121,8 +123,7 @@ if ($_GET["action"] === "updateData") {
 // function to delete data
 if ($_GET["action"] === "deleteData") {
   $id = $_POST["id"];
-  $delete_image = $_POST["delete_image"];
-
+  
   $sql = "DELETE FROM contdata WHERE `id`=$id";
 
   if (mysqli_query($conn, $sql)) {

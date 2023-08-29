@@ -98,7 +98,7 @@ $(document).ready(function() {
         if (data.status === "نشط") {
           $("#editForm input[name='status'][value='نشط']").attr("checked", true);
         } else if(data.status === "مخالصة") {
-          $("#editForm input[name='status'][value='مخالصة']").attr("checked", true);          
+          $("#editForm input[name='status'][value='مخالصة']").attr("checked", false);          
         }
         // show the edit user offcanvas
         $("#offcanvasEditUser").offcanvas("show");
@@ -149,7 +149,7 @@ $(document).ready(function() {
 
   // function to delete data
   $("#myTable").on("click", ".deleteBtn", function() {
-    if(confirm("Are you sure you want to delete this user?")) {
+    if(confirm("Are you sure you want to delete this contract?")) {
       var id = $(this).val();
 
       $.ajax({
@@ -157,7 +157,7 @@ $(document).ready(function() {
         type: "POST",
         dataType: "json",
         data: {
-          id,
+          id
 
         },
         success: function(response) {
