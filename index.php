@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP MySQL Ajax CRUD with Bootstrap 5 and Datatables Library</title>
+    <title>استعراض العقود النشطة</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
@@ -25,17 +25,18 @@
     </nav>
 
     <div class="container">
-        <div class="d-flex justify-content-between align-items-center mb-3">
-            <div class="text-body-secondary">
-                <span class="h5">All Users</span>
-                <br>
-                Manage all your existing users or add a new on
-            </div>
-            <!-- Button to trigger Add user offcanvas -->
+        <div class="d-flex justify-content-between align-items-center mb-2">
+        <!-- Button to trigger Add user offcanvas -->
             <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasAddUser">
                 <i class="fa-solid fa-user-plus fa-xs"></i>
-                Add new user
+                إضافة عقد جديد
             </button>
+            <div  class="text-body-secondary">
+                <span class="h4">جميع العقود</span>
+                <br>
+                إدارة جميع العقود الحالية أو إضافة عقد جديد
+            </div>
+
         </div>
 
 
@@ -44,15 +45,15 @@
                 <tr>
                     <th>#</th>
                     <th>العقد</th>
-                    <th>العميل</th>
+                    <th style="width:20%;">العميل</th>
                     <th>تاريخ العقد</th>
-                    <th>تاريخ نهاية العقد</th>
+                    <th>تاريخ بداية السداد</th>
                     <th>الكمية</th>
                     <th>القسط</th>
                     <th>اجمالي العقد</th>
                     <th>طريقة السداد</th>
                     <th>حالة العقد</th>
-                    <th>الإجراء</th>
+                    <th style="width:10%;">الإجراء</th>
                 </tr>
             </thead>
             <tbody></tbody>
@@ -62,9 +63,9 @@
 
 
     <!-- Add user offcanvas  -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasAddUser" style="width:600px;">
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasAddUser" style="width:600px; background-color:#e6ebef;">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Add new user</h5>
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">إضافة عقد جديد</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
@@ -118,8 +119,8 @@
                     <label class="form-input-label">مخالصة</label>
                 </div>
                 <div>
-                    <button type="submit" class="btn btn-primary me-1" id="insertBtn">Submit</button>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="offcanvas">Cancel</button>
+                    <button type="submit" class="btn btn-primary me-1" id="insertBtn">حفظ بيانات العقد</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="offcanvas">الغاء</button>
                 </div>
             </form>
         </div>
@@ -185,8 +186,8 @@
             <label class="form-input-label">مخالصة</label>
         </div>
         <div>
-            <button type="submit" class="btn btn-primary me-1" id="editBtn">Update</button>
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="offcanvas">Cancel</button>
+            <button type="submit" class="btn btn-primary me-1" id="editBtn">تحديث</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="offcanvas">الغاء</button>
         </div>
         </form>
     </div>
